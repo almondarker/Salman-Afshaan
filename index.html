@@ -1,316 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Salman & Afshaan — Wedding</title>
-<meta name="description" content="Wedding of Mohamed Salman & Afshaan A. on 11 Oct 2025 in Chennai." />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-<style>
-  /* --- Theme + base --- */
-  :root{
-    --bg:#fffdf7; --ink:#14151a; --muted:#6b7280; --card:#ffffff;
-    --brand:#10b981; --brand2:#22c55e; --grad:linear-gradient(135deg,#10b981,#0ea5e9);
-  }
-  body.theme-rose{ --brand:#f43f5e; --brand2:#fb7185; --grad:linear-gradient(135deg,#be123c,#f59e0b); }
-  body.theme-sapphire{ --brand:#2563eb; --brand2:#38bdf8; --grad:linear-gradient(135deg,#312e81,#06b6d4); }
-  *{box-sizing:border-box}
-  html,body{margin:0}
-  body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial; color:var(--ink); background:var(--bg); line-height:1.65; scroll-behavior:smooth}
-  a{color:var(--brand); text-decoration:none}
-  a:hover{text-decoration:underline}
-  .wrap{max-width:1040px; margin:0 auto; padding:0 18px}
-
-  /* --- Top nav --- */
-  .top{position:sticky; top:0; z-index:50; background:rgba(255,255,255,.78); backdrop-filter:blur(8px); border-bottom:1px solid #e5e7eb}
-  .top .wrap{display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap}
-  .brand{font-family:"Playfair Display",serif; font-weight:700}
-  .menu{list-style:none; display:flex; gap:12px; margin:0; padding:10px 0; flex-wrap:wrap}
-  .menu a{padding:8px 10px; border-radius:10px}
-  .menu a:hover{background:#eef2ff}
-  .btn{display:inline-block; padding:12px 16px; border-radius:12px; border:2px solid #fff; color:#fff; font-weight:700}
-  .btn.filled{background:#fff; color:#111827; border-color:#fff}
-  .swatches{display:flex; gap:6px; align-items:center; color:#6b7280; font-size:14px}
-  .sw{width:18px; height:18px; border-radius:50%; border:2px solid #fff; box-shadow:0 0 0 2px rgba(0,0,0,.08); cursor:pointer}
-  .sw[data-t="emerald"]{background:#10b981}.sw[data-t="rose"]{background:#f43f5e}.sw[data-t="sapphire"]{background:#2563eb}
-
-  /* --- Hero (gradient only) --- */
-  header.hero{position:relative; color:#fff; text-align:center; padding:92px 0 56px; overflow:hidden; background:var(--grad)}
-  h1{font-family:"Playfair Display",serif; font-size:clamp(36px,6vw,64px); margin:0 0 8px}
-  .subtitle{opacity:.95; font-weight:600}
-  .badge{display:inline-block; background:rgba(255,255,255,.15); border:1px solid rgba(255,255,255,.3); padding:6px 12px; border-radius:999px}
-  .cta{display:inline-flex; gap:10px; margin-top:14px; flex-wrap:wrap; justify-content:center}
-
-  /* --- Countdown --- */
-  #countdown{display:grid; grid-template-columns:repeat(4,minmax(70px,1fr)); gap:10px; max-width:520px; margin:18px auto 0}
-  #countdown .box{background:rgba(255,255,255,.15); border:1px solid rgba(255,255,255,.3); border-radius:12px; padding:10px}
-  #countdown .num{font-size:28px; font-weight:800; display:block}
-
-  /* --- Sections --- */
-  section{padding:60px 0}
-  h2{font-size:clamp(26px,3.2vw,38px); margin:0 0 18px; color:var(--brand); text-align:center; font-family:"Playfair Display",serif}
-  p{margin:0 0 12px}
-  .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px}
-  .two{display:grid; grid-template-columns:1.05fr .95fr; gap:20px}
-  .card{background:var(--card); border:2px solid rgba(0,0,0,.06); border-radius:16px; padding:18px; box-shadow:0 10px 24px rgba(0,0,0,.05)}
-  .tag{font-size:12px; letter-spacing:.08em; color:#6b7280; text-transform:uppercase}
-  .note{background:#f8fafc; border:1px dashed #cbd5e1; border-radius:14px; padding:12px; color:#475569}
-  footer{padding:26px 0 60px; text-align:center; color:#6b7280}
-
-  /* --- Mobile tweaks --- */
-  @media (max-width: 860px){ .two{grid-template-columns:1fr} }
-  @media (max-width: 640px){
-    .wrap{padding:0 14px}
-    header.hero{padding:72px 0 40px}
-    .menu{overflow-x:auto; white-space:nowrap; -webkit-overflow-scrolling:touch}
-    .menu a{padding:10px 12px}
-    #countdown{grid-template-columns:repeat(2,minmax(70px,1fr)); max-width:380px}
-    section{padding:40px 0}
-    .swatches{width:100%; justify-content:center}
-  }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Salman & Afshaan Wedding</title>
+  <style>
+    body {font-family: Arial, sans-serif; margin:0; padding:0;}
+    header {background:linear-gradient(135deg,#16a085,#1abc9c);color:white;padding:40px;text-align:center;}
+    nav {background:white; padding:10px; text-align:center; position:sticky; top:0;}
+    nav a {margin:0 15px; text-decoration:none; color:#16a085; font-weight:bold;}
+    section {padding:60px 20px; max-width:900px; margin:auto;}
+    h2 {color:#16a085;}
+    footer {background:#f4f4f4; text-align:center; padding:20px; margin-top:20px;}
+    .countdown {display:flex; justify-content:center; gap:15px; margin-top:20px;}
+    .countdown div {background:#ecf0f1; padding:15px 25px; border-radius:8px; font-size:18px;}
+  </style>
 </head>
-<body class="theme-emerald">
-
-  <nav class="top">
-    <div class="wrap">
-      <strong class="brand">Salman ♥ Afshaan</strong>
-      <ul class="menu">
-        <li><a href="#story">Story</a></li>
-        <li><a href="#events">Events</a></li><li><a href="#travel">Travel</a></li>
-        <li><a href="#faqs">FAQs</a></li>
-      </ul>
-      <div class="swatches">
-        Theme:
-        <button class="sw" data-t="emerald" title="Emerald"></button>
-        <button class="sw" data-t="rose" title="Rose"></button>
-        <button class="sw" data-t="sapphire" title="Sapphire"></button>
-      </div>
-    </div>
-  </nav>
-
-  <header class="hero">
-    <div class="wrap">
-      <span class="badge">Bismillah — You're invited</span>
-      <h1>Mohamed Salman & Afshaan A.</h1>
-      <div class="subtitle">Chennai • Saturday, 11 October 2025</div>
-      <div class="cta">
-        <a class="btn" href="#events">See Events</a>
-      </div>
-      <div id="countdown" aria-label="Countdown to Nikkah" class="cta">
-        <div class="box"><span class="num" id="d">00</span><span>Days</span></div>
-        <div class="box"><span class="num" id="h">00</span><span>Hours</span></div>
-        <div class="box"><span class="num" id="m">00</span><span>Minutes</span></div>
-        <div class="box"><span class="num" id="s">00</span><span>Seconds</span></div>
-      </div>
-    </div>
+<body>
+  <header>
+    <h1>Mohamed Salman & Afshaan A.</h1>
+    <p>Chennai • Saturday, 11 October 2025</p>
+    <div class="countdown" id="countdown"></div>
   </header>
 
-  <main class="wrap">
-    <section id="story">
-      <div>
-        <h2>Story</h2>
-        <p>We were introduced the traditional way—families, a few careful conversations, an engagement that felt more like a promise than a love story. At first, we were polite guests in each other’s lives: scheduled calls, thoughtful questions, gentle smiles.</p>
-        <p>Then the small things began to stack up. Her laugh on a late-night call. My bad jokes she pretended were good. Sharing tea, swapping stories, planning tiny pieces of a big future. We learned each other’s rhythms—how she thinks before she speaks, how I speak before I think—and met in the middle.</p>
-        <p>Somewhere between trading late-night voice notes and laughing over playlist choices, the arrangement quietly rewrote itself. We didn’t fall all at once; we chose each other, day by day—until choosing became love.</p>
-      </div>
-    </section>
+  <nav>
+    <a href="#story">Story</a>
+    <a href="#events">Events</a>
+    <a href="#travel">Travel</a>
+    <a href="#faqs">FAQs</a>
+  </nav>
 
-    <section id="events">
-      <h2>Events</h2>
-      <div class="grid">
-        <article class="card">
-          <h3>Nikkah</h3>
-          <p><strong>After Namaz-e-Asr</strong> • Saturday, 11 Oct 2025</p>
-          <p>On Saturday the 11th October 2025 (18th Rabbi ul Aaqir, 1447 Hijri) — After Namaz-e-Asr at Periamet Mosque, Sydenhams Road, Periamet, Chennai — 600 003</p>
-          <p><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Periamet%20Mosque%2C%20Sydenhams%20Road%2C%20Periamet%2C%20Chennai%20600003">Open in Google Maps</a></p>
-        </article>
-        <article class="card">
-          <h3>Valima &amp; Dinner</h3>
-          <p><strong>7:30 PM onwards</strong> • Saturday, 11 Oct 2025</p>
-          <p>at “Jawahar Elite”, A.R. Tower, No. 5, Vepery High Road, Periamet, Chennai — 600 003</p>
-          <p><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Jawahar%20Elite%2C%20A.R.%20Tower%2C%20No.%205%2C%20Vepery%20High%20Road%2C%20Periamet%2C%20Chennai%20600003">Open in Google Maps</a></p>
-        </article>
-      </div>
-    </section>
+  <section id="story">
+    <h2>Story</h2>
+    <p>We were introduced the traditional way—families, a few careful conversations, an engagement that felt more like a promise than a love story. At first, we were polite guests in each other’s lives: scheduled calls, thoughtful questions, gentle smiles.</p>
+    <p>Then the small things began to stack up. Her laugh on a late-night call. My bad jokes she pretended were good. Sharing tea, swapping stories, planning tiny pieces of a big future. We learned each other’s rhythms—how she thinks before she speaks, how I speak before I think—and met in the middle.</p>
+    <p>Somewhere between trading late-night voice notes and laughing over playlist choices, the arrangement quietly rewrote itself. We didn’t fall all at once; we chose each other, day by day—until choosing became love.</p>
+  </section>
 
-    
+  <section id="events">
+    <h2>Events</h2>
+    <h3>Nikkah</h3>
+    <p>On Saturday the 11th October 2025<br>(18th Rabbi ul Aaqir, 1447 Hijiri)<br>After Namaz-e-Asar, at Periamet Mosque, Sydenhams Road, Perimet, Chennai - 600 003</p>
+    <h3>Valima & Dinner</h3>
+    <p>7:30 PM onwards<br>at "Jawahar Elite" A.R. Tower,<br>No 5, Vepery High Road, Periamet, Chennai - 600 003</p>
+    <p>WhatsApp: <a href="tel:+918220143993">8220143993</a></p>
+  </section>
 
-    <section id="travel">
-      <h2>Travel</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Getting here</h3>
-          <p>For out-station guests, fly to <strong>MAA</strong> (Chennai International). Taxis and Metro available.</p>
-        </div>
-        <div class="card">
-          <h3>Stay nearby</h3>
-          <ul>
-            <li>
-              <strong>Royal Regency (Periamet)</strong> —
-              <a target="_blank" rel="noopener" href="https://maps.app.goo.gl/PffYvNKzPLkuqZxH9">Google Maps</a><br>
-              <small>The Royal Regency, 26/27, Poonamallee High Road Periamet, Adikesavarpuram, Egmore, Chennai, Tamil Nadu 600003</small>
-            </li>
-            <li>
-              <strong>Tamil Nadu Haj Service Society</strong> —
-              <a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Tamil+Nadu+Haj+Service+Society+Chennai">Google Maps</a>
-            </li>
-          </ul>
-          <p class="note">Tip: call ahead to confirm availability and check distance to Periamet Mosque / A.R. Tower.</p>
-        </div>
-        <div class="card">
-          <h3>Dress code</h3>
-          <p>Festive traditional. Come comfortable, come as you are!</p>
-        </div>
-      </div>
-    </section>
+  <section id="travel">
+    <h2>Travel & Stay</h2>
+    <h3>Stay Nearby</h3>
+    <p><b>The Royal Regency</b><br>26/27, Poonamallee High Road Periamet, Adikesavarpuram, Egmore, Chennai, Tamil Nadu 600003<br>
+    <a href="https://maps.app.goo.gl/PffYvNKzPLkuqZxH9" target="_blank">View on Google Maps</a></p>
+    <p><b>Tamil Nadu Haj Service Society</b> – Periamet</p>
+  </section>
 
-    <section id="faqs" class="two">
-      <div>
-        <h2>FAQs</h2>
-        <details class="card"><summary>Are kids welcome?</summary><div>Absolutely! There will be kid-friendly food and space.</div></details>
-        <details class="card"><summary>Gifts?</summary><div>Your presence and duas are our best gift. ❤️</div></details>
-      </div>
-      <div class="card">
-        <span class="tag">Contact</span>
-        <ul>
-          <li><strong>WhatsApp:</strong> <a href="https://wa.me/918220143993" target="_blank" rel="noopener">+91 82201 43993</a></li>
-          <li><strong>Email:</strong> <a href="mailto:mohamedsalman19906@gmail.com">mohamedsalman19906@gmail.com</a></li>
-        </ul>
-      </div>
-    </section>
-  </main>
+  <section id="faqs">
+    <h2>FAQs</h2>
+    <h3>What should I wear?</h3>
+    <p>Traditional or formal attire is appreciated.</p>
+    <h3>Who do I contact for help?</h3>
+    <p>You can reach Salman at <a href="mailto:mohamedsalman19906@gmail.com">mohamedsalman19906@gmail.com</a>.</p>
+  </section>
 
-  <footer>With duas and warm regards — The families of the bride and groom</footer>
+  <footer>
+    <p>With love, Salman & Afshaan</p>
+  </footer>
 
-<script>
-  // Theme switcher
-  const saved = localStorage.getItem('theme'); if(saved) document.body.className = 'theme-'+saved;
-  document.querySelectorAll('.sw').forEach(b=>b.addEventListener('click',()=>{const t=b.dataset.t;document.body.className='theme-'+t;localStorage.setItem('theme',t)}));
+  <script>
+    // Countdown Timer
+    const countdown = document.getElementById("countdown");
+    const weddingDate = new Date("Oct 11, 2025 16:00:00").getTime();
 
-  // Countdown (reads ISO datetime from #when)
-  const when = document.getElementById('when');
-  const target = when?.dataset?.weddingDate
-    ? new Date(when.dataset.weddingDate).getTime()
-    : new Date('2025-10-11T17:00:00+05:30').getTime();
-  const el = {d:document.getElementById('d'),h:document.getElementById('h'),m:document.getElementById('m'),s:document.getElementById('s')};
-  const tick=()=>{const diff=Math.max(0,target-Date.now());
-    const d=Math.floor(diff/86400000),h=Math.floor(diff/3600000)%24,m=Math.floor(diff/60000)%60,s=Math.floor(diff/1000)%60;
-    el.d.textContent=String(d).padStart(2,'0'); el.h.textContent=String(h).padStart(2,'0');
-    el.m.textContent=String(m).padStart(2,'0'); el.s.textContent=String(s).padStart(2,'0');};
-  tick(); setInterval(tick,1000);
+    const timer = setInterval(() => {
+      const now = new Date().getTime();
+      const diff = weddingDate - now;
 
-  // Build ICS as a function so tests can validate without clicking
-  function buildICS(){
-    return [
-      "BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//Wedding//EN",
-      "BEGIN:VEVENT","UID:nikkah@site","DTSTAMP:"+toICS(new Date()),
-      "DTSTART:20251011T113000Z","DTEND:20251011T123000Z",
-      "SUMMARY:Nikkah — Salman & Afshaan",
-      "LOCATION:Periamet Mosque, Sydenhams Road, Periamet, Chennai 600003",
-      "DESCRIPTION:After Namaz-e-Asr","END:VEVENT",
-      "BEGIN:VEVENT","UID:valima@site","DTSTAMP:"+toICS(new Date()),
-      "DTSTART:20251011T140000Z","DTEND:20251011T170000Z",
-      "SUMMARY:Valima & Dinner — Salman & Afshaan",
-      "LOCATION:Jawahar Elite, A.R. Tower, No. 5, Vepery High Road, Periamet, Chennai 600003",
-      "DESCRIPTION:7:30 PM onwards","END:VEVENT","END:VCALENDAR"
-    ].join("
-");
-  }
+      if (diff <= 0) {
+        clearInterval(timer);
+        countdown.innerHTML = "<p>The big day is here!</p>";
+        return;
+      }
 
-  // Add to Calendar (.ics with two events)
-  document.getElementById('addCal')?.addEventListener('click', ()=>{
-    const ics = buildICS();
-    const blob = new Blob([ics], {type:"text/calendar"});
-    const url = URL.createObjectURL(blob);
-    const a = Object.assign(document.createElement('a'), {href:url, download:"wedding-events.ics"});
-    document.body.appendChild(a); a.click(); a.remove(); setTimeout(()=>URL.revokeObjectURL(url),1000);
-  });
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
-  function toICS(d){const p=n=>String(n).padStart(2,"0");return d.getUTCFullYear()+p(d.getUTCMonth()+1)+p(d.getUTCDate())+"T"+p(d.getUTCHours())+p(d.getUTCMinutes())+p(d.getUTCSeconds())+"Z"}
-</script>
-
-<!-- Smoke tests (console) -->
-<script>
-(function(){
-  try{
-    // Structure
-    console.assert(document.querySelector('meta[name="viewport"]')!==null,'Viewport meta missing');
-    console.assert(document.querySelector('.hero')!==null,'Hero missing');
-    console.assert(document.getElementById('events')!==null,'Events section missing');
-    console.assert(document.getElementById('rsvp')===null,'RSVP section should be removed');
-    console.assert(!document.querySelector('a[href="#rsvp"]'),'RSVP link should be removed');
-    console.assert(document.getElementById('venue')===null,'Venue section should be removed');
-    console.assert(!document.querySelector('a[href="#venue"]'),'Venue link should be removed');
-    console.assert(document.getElementById('countdown')!==null,'Countdown element missing');
-    console.assert(typeof toICS==='function','toICS function missing');
-    const eventsBtn=[...document.querySelectorAll('.cta a')].find(a=>a.textContent.includes('See Events'));
-    console.assert(eventsBtn && eventsBtn.getAttribute('href')==='#events','See Events button not linked to #events');
-
-    // Newline tests (LF only)
-    const joined=["X","Y"].join("
-");
-    console.assert(joined==="X
-Y",'LF join failed');
-
-    // ICS minimal join newline check + content checks
-    const sampleICS=["BEGIN","A","END"].join("
-");
-    console.assert(sampleICS.includes("
-"),'ICS should contain LF newlines');
-    if (typeof buildICS === 'function') {
-      const icsText = buildICS();
-      console.assert(icsText.startsWith('BEGIN:VCALENDAR'),'ICS should start with VCALENDAR');
-      console.assert(icsText.includes('SUMMARY:Nikkah'),'ICS must include Nikkah summary');
-      console.assert(icsText.includes('SUMMARY:Valima & Dinner'),'ICS must include Valima summary');
-      console.assert(icsText.split('
-').length > 10,'ICS should have multiple lines');
-    }
-
-    // Story presence
-    const storySec=document.querySelector('#story');
-    console.assert(storySec && storySec.textContent.includes('We were introduced the traditional way'), 'Story text not injected');
-    console.assert(storySec.textContent.includes('late-night call'), 'Story hyphenation missing');
-    console.assert(storySec.textContent.includes('day by day—until choosing became love'), 'Story closing line missing');
-
-    // Story layout: should be full-width (no grid)
-    console.assert(!storySec.classList.contains('two'), 'Story should not use two-column grid');
-    console.assert(getComputedStyle(storySec).display !== 'grid', 'Story should not be grid layout');
-
-    // Ensure no hero photo references remain
-    const htmlSrc=document.documentElement.outerHTML;
-    console.assert(!htmlSrc.includes('hero-couple.jpg') && !htmlSrc.includes('WhatsApp Image'),'Image file references should be removed');
-    console.assert(!htmlSrc.includes('--hero-photo'),'CSS variable for hero photo should be removed');
-
-    // Stay Nearby tests (Royal Regency details)
-    const stayCard=[...document.querySelectorAll('#travel .card')].find(c=>c.querySelector('h3')?.textContent.includes('Stay nearby'));
-    console.assert(stayCard && stayCard.textContent.includes('Poonamallee High Road'),'Royal Regency address missing');
-    const rrLink=[...stayCard.querySelectorAll('a')].find(a=>a.href.includes('PffYvNKzPLkuqZxH9'));
-    console.assert(rrLink,'Royal Regency Google Maps link not updated');
-
-    // Contact email check
-    const emailLink = document.querySelector('#faqs a[href^="mailto:"]');
-    console.assert(emailLink && emailLink.href.includes('mohamedsalman19906@gmail.com'),'Contact email mailto not updated');
-    console.assert(emailLink && emailLink.textContent.includes('mohamedsalman19906@gmail.com'),'Contact email text not updated');
-
-    // FAQs check: ensure the “plus-one” question is removed
-    const plusFAQ=[...document.querySelectorAll('#faqs summary')].find(s=>/Can I bring a plus-one\?/i.test(s.textContent));
-    console.assert(!plusFAQ,'Plus-one FAQ should be removed');
-
-    // Ensure the cover-photo prompt and controls are gone
-    console.assert(!document.body.textContent.match(/Optional: add your cover photo/i), 'Cover photo prompt should be removed');
-    console.assert(!document.getElementById('uploadBtn') && !document.getElementById('photoInput'), 'Cover photo controls should be removed');
-
-    // 'When' section must be gone
-    console.assert(!document.getElementById('when'),'When section should be removed');
-    console.assert(!document.querySelector('a[href="#when"]'),'When link should be removed');
-
-    console.log('✅ Smoke tests passed');
-  }catch(e){console.error('❌ Test failure',e)}
-})();
-</script>
-
+      countdown.innerHTML = `
+        <div>${days} Days</div>
+        <div>${hours} Hours</div>
+        <div>${minutes} Minutes</div>
+        <div>${seconds} Seconds</div>
+      `;
+    }, 1000);
+  </script>
 </body>
 </html>
