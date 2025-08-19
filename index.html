@@ -9,7 +9,7 @@
     :root{
       --paper:#fffaf3;          /* warm ivory */
       --ink:#3a3a3a;            /* soft charcoal */
-      --muted:#6f6b63;          /* muted text */
+      --muted:#5a554e;          /* muted text */
       --rose:#e8c7c4;           /* blush rose */
       --rose-deep:#d9a3a0;      /* deeper blush */
       --sage:#a9c7b6;           /* sage green */
@@ -29,13 +29,13 @@
     .top{position:sticky; top:0; z-index:50; backdrop-filter:saturate(120%) blur(8px); background:rgba(255,250,243,.75); border-bottom:1px solid #eadfce}
     .nav{max-width:1080px; margin:auto; display:flex; align-items:center; gap:12px; padding:10px 16px}
     .brand{font-weight:800; letter-spacing:.3px}
-    .menu{margin-left:auto; display:flex; gap:10px; flex-wrap:wrap}
+    .menu{margin-left:auto; display:flex; gap:10px; flex-wrap:wrap; list-style:none; margin:0; padding:0}
     .menu a{color:var(--muted); text-decoration:none; padding:8px 12px; border-radius:999px}
     .menu a:hover{background:#f4ece2; color:#2d2d2d}
     .menu a.active{background:linear-gradient(135deg, var(--rose), var(--sage)); color:#2b2a28}
 
     /* HERO */
-    header.hero{position:relative; text-align:center; padding:86px 16px 56px}
+    section.hero{position:relative; text-align:center; padding:86px 16px 56px}
     .wrap{max-width:1080px; margin:auto}
     .names{font-size:clamp(38px,6.5vw,68px); margin:0 0 8px; letter-spacing:.4px}
     .sub{color:var(--muted); font-weight:600}
@@ -76,36 +76,37 @@
   </style>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 </head>
-<body>
-  <div class="top floral-top">
-    <div class="nav">
-      <div class="brand">Salman ♥ Afshaan</div>
-      <nav class="menu" id="menu">
-        <a href="#story">Story</a>
-        <a href="#events">Events</a>
-        <a href="#travel">Travel</a>
-        <a href="#faqs">FAQs</a>
-      </nav>
-    </div>
-  </div>
+  <body id="top">
+    <header class="top floral-top">
+      <nav class="nav" aria-label="Primary">
+        <a class="brand" href="#top" aria-label="Go to top">Salman <span aria-hidden="true">♥</span> Afshaan</a>
+      <ul class="menu" id="menu">
+        <li><a href="#story" aria-label="Go to Story section">Story</a></li>
+        <li><a href="#events" aria-label="Go to Events section">Events</a></li>
+        <li><a href="#travel" aria-label="Go to Travel section">Travel</a></li>
+        <li><a href="#faqs" aria-label="Go to FAQs section">FAQs</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <header class="hero floral-top">
+  <main>
+  <section class="hero floral-top">
     <div class="wrap">
-      <div class="monogram">S&A</div>
+      <div class="monogram" aria-hidden="true">S&A</div>
       <h1 class="names">Mohamed Salman & Afshaan A.</h1>
       <div class="sub">Chennai • Saturday, 11 October 2025</div>
-      <div id="countdown" aria-label="Countdown to Nikkah">
-        <div class="box"><span class="num" id="days">00</span><span class="muted">Days</span></div>
-        <div class="box"><span class="num" id="hours">00</span><span class="muted">Hours</span></div>
-        <div class="box"><span class="num" id="minutes">00</span><span class="muted">Minutes</span></div>
-        <div class="box"><span class="num" id="seconds">00</span><span class="muted">Seconds</span></div>
+      <div id="countdown" role="timer" aria-label="Countdown to Nikkah" aria-live="polite">
+        <div class="box" aria-label="Days remaining"><span class="num" id="days">00</span><span class="muted">Days</span></div>
+        <div class="box" aria-label="Hours remaining"><span class="num" id="hours">00</span><span class="muted">Hours</span></div>
+        <div class="box" aria-label="Minutes remaining"><span class="num" id="minutes">00</span><span class="muted">Minutes</span></div>
+        <div class="box" aria-label="Seconds remaining"><span class="num" id="seconds">00</span><span class="muted">Seconds</span></div>
       </div>
       <div class="center" style="margin-top:14px">
         <a class="btn" href="#events">See Events</a>
         <a class="btn ghost" href="#travel">Stay Nearby</a>
       </div>
     </div>
-  </header>
+  </section>
 
   <section id="story">
     <div class="grid">
@@ -174,6 +175,8 @@
       </div>
     </div>
   </section>
+
+  </main>
 
   <footer>
     With duas and warm regards — The families of the bride and groom
