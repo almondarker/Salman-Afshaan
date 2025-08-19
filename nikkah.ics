@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Salman & Afshaan Wedding//EN
+BEGIN:VEVENT
+UID:nikkah-20251011@salman-afshaan.com
+DTSTAMP:20250819T175118Z
+DTSTART:20251011T110000Z
+DTEND:20251011T130000Z
+SUMMARY:Nikkah Ceremony
+LOCATION:Periamet Mosque, Sydenhams Road, Periamet, Chennai - 600003, India
+DESCRIPTION:Nikkah ceremony at Periamet Mosque. Please arrive 15–20 minutes early.
+END:VEVENT
+END:VCALENDAR

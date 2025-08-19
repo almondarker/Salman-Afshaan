@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Salman & Afshaan Wedding//EN
+BEGIN:VEVENT
+UID:valima-20251011@salman-afshaan.com
+DTSTAMP:20250819T175118Z
+DTSTART:20251011T140000Z
+DTEND:20251011T170000Z
+SUMMARY:Valima & Dinner
+LOCATION:Jawahar Elite, A.R. Tower, No. 5, Vepery High Road, Periamet, Chennai - 600003, India
+DESCRIPTION:Valima & Dinner reception at Jawahar Elite.
+END:VEVENT
+END:VCALENDAR
